@@ -143,6 +143,7 @@
 .supply-icon {
   font-family: 'Material Symbols Outlined';
   font-size: 26px;
+  dominant-baseline: middle;
   pointer-events: none;
   user-select: none;
 }
@@ -360,6 +361,10 @@
   background: #178a66;
 }
 
+.mobile-card-stack {
+  display: none;
+}
+
 .svg-card {
   filter: drop-shadow(0 16px 28px rgba(92, 52, 74, 0.08));
   transition: filter 0.2s ease, opacity 0.2s ease;
@@ -424,5 +429,75 @@
 
   .org-pattern {
     padding: 8px;
+  }
+
+  .supply-icon {
+    font-size: 24px;
+  }
+
+  .org-diagram {
+    view-transition-name: none;
+  }
+
+  .org-diagram .svg-card,
+  .desktop-card-content {
+    display: none;
+  }
+
+  .mobile-card-stack {
+    display: grid;
+    gap: 12px;
+    padding: 8px;
+  }
+
+  .mobile-role-card {
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 12px 28px rgba(92, 52, 74, 0.08);
+  }
+
+  .mobile-role-card h2 {
+    margin: 0 0 10px;
+    color: #2c1530;
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .mobile-role-card p {
+    margin: 0 0 12px;
+    color: #5f4a63;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .mobile-role-card ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mobile-role-card li {
+    position: relative;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.78);
+    padding: 8px 10px 8px 24px;
+    color: #46324a;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .mobile-role-card li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #178a66;
   }
 }
