@@ -162,7 +162,7 @@ function OrgPattern() {
           return (
             <g key={group.id} onMouseEnter={() => handleEnter(group.id)} onMouseLeave={handleLeave}>
               <rect className={`svg-card ${hoverTarget === group.id ? 'active' : ''}`} x={group.x} y="250" width={cardW} height="250" rx="22" fill={group.fill} />
-              <foreignObject className="desktop-card-content" x={group.x + 18} y="274" width="214" height="206">
+              <foreignObject x={group.x + 18} y="274" width="214" height="206">
                 <div className="card-content">
                   <h2>{group.title}</h2>
                   <p>{group.summary}</p>
@@ -189,19 +189,6 @@ function OrgPattern() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="mobile-card-stack">
-        {roleGroups.map((group) => (
-          <article className="mobile-role-card" style={{ background: group.fill }} key={group.id}>
-            <h2>{group.title}</h2>
-            <p>{group.summary}</p>
-            <ul>
-              {group.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
     </section>
   );
 }
