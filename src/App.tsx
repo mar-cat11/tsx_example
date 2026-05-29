@@ -173,7 +173,7 @@ function OrgPattern() {
                   <g key={item}>
                     <rect className="role-row" x={group.x + 24} y={y - 18} width="202" height="25" rx="5" />
                     <circle className="status-dot" cx={group.x + 38} cy={y - 5} r="4" />
-                    <text className="role-text" x={group.x + 52} y={y - 1}>{item}</text>
+                    <text className="role-text" x={group.x + 52} y={y - 1} textLength="166" lengthAdjust="spacingAndGlyphs">{item}</text>
                   </g>
                 );
               })}
