@@ -162,17 +162,21 @@ function OrgPattern() {
           return (
             <g key={group.id} onMouseEnter={() => handleEnter(group.id)} onMouseLeave={handleLeave}>
               <rect className={`svg-card ${hoverTarget === group.id ? 'active' : ''}`} x={group.x} y="250" width={cardW} height="250" rx="22" fill={group.fill} />
-              <foreignObject x={group.x + 18} y="274" width="214" height="206">
-                <div className="card-content">
-                  <h2>{group.title}</h2>
-                  <p>{group.summary}</p>
-                  <ul>
-                    {group.items.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </foreignObject>
+              <text className="card-title" x={group.x + cardW / 2} y="288" textAnchor="middle">{group.title}</text>
+              <text className="card-summary" x={group.x + 24} y="318">
+                <tspan x={group.x + 24} dy="0">{group.summary.slice(0, 21)}</tspan>
+                <tspan x={group.x + 24} dy="16">{group.summary.slice(21)}</tspan>
+              </text>
+              {group.items.map((item, index) => {
+                const y = 364 + index * 32;
+                return (
+                  <g key={item}>
+                    <rect className="role-row" x={group.x + 24} y={y - 18} width="202" height="25" rx="5" />
+                    <circle className="status-dot" cx={group.x + 38} cy={y - 5} r="4" />
+                    <text className="role-text" x={group.x + 52} y={y - 1}>{item}</text>
+                  </g>
+                );
+              })}
             </g>
           );
         })}

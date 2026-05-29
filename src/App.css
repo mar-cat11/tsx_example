@@ -310,58 +310,10 @@
   font-size: 16px;
 }
 
-.card-content {
-  height: 100%;
-  color: #2c1530;
-  font-family: 'Inter', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif;
-}
-
-.card-content h2 {
-  margin: 0 0 10px;
-  font-size: 14px;
-  line-height: 1.35;
-  text-align: center;
-}
-
-.card-content p {
-  margin: 0 0 10px;
-  color: #5f4a63;
+.card-summary {
+  fill: #5f4a63;
   font-size: 10px;
   font-weight: 600;
-  line-height: 1.55;
-}
-
-.card-content ul {
-  display: grid;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.card-content li {
-  position: relative;
-  min-height: 22px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.74);
-  box-shadow: 0 4px 14px rgba(134, 87, 113, 0.08);
-  padding: 6px 8px 6px 20px;
-  color: #46324a;
-  font-size: 9px;
-  font-weight: 700;
-  line-height: 1.35;
-  white-space: nowrap;
-}
-
-.card-content li::before {
-  content: '';
-  position: absolute;
-  left: 8px;
-  top: 11px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #178a66;
 }
 
 .svg-card {
