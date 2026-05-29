@@ -140,13 +140,6 @@
   fill: #1f2937;
 }
 
-.supply-icon {
-  font-family: 'Material Symbols Outlined';
-  font-size: 26px;
-  pointer-events: none;
-  user-select: none;
-}
-
 .supply-node {
   cursor: pointer;
   transition: opacity 0.25s ease;
@@ -154,6 +147,17 @@
 
 .supply-node circle {
   transition: stroke-width 0.2s ease;
+}
+
+.supply-icon-html {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  font-size: 26px;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
 }
 
 .supply-label {
